@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "function",
+    "name": "RequestScriptPuke",
+    "signature": "RequestScriptPuke(int script, int arg1, int arg2, int arg3)",
+    "summary": "Requests execution of the given script with arguments on the server.",
+    "docUrl": "https://wiki.zandronum.com/RequestScriptPuke",
+    "engines": ["zandronum"],
+    "languages": ["acs", "bcs"]
+  },
+  {
+    "kind": "function",
+    "name": "SetSectorGlow",
+    "signature": "SetSectorGlow(int tag, int r, int g, int b)",
+    "summary": "Sets sector glow color.",
+    "docUrl": "https://zdoom.org/w/index.php?title=SetSectorGlow",
+    "engines": ["uzdoom"],
+    "languages": ["acs", "bcs"]
+  }
+]

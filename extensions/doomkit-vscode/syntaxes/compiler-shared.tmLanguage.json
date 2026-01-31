@@ -1,0 +1,101 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Compilers Shared (ACS/BCS)",
+  "scopeName": "source.compilers.shared",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+
+    { "include": "#preprocessor" },
+
+    { "include": "#scriptkeywords" },
+    { "include": "#scripttypes" },
+
+    { "include": "#variablemodifiers" },
+    { "include": "#types" },
+
+    { "include": "#controlflow" },
+    { "include": "#other" },
+
+    { "include": "#functioncallpattern" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash", "match": "//.*$" },
+        { "name": "comment.block", "begin": "/\\*", "end": "\\*/" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape", "match": "\\\\." }
+          ]
+        }
+      ]
+    },
+    "preprocessor": {
+      "patterns": [
+        {
+          "name": "keyword.control.preprocessor",
+          "match": "^(?i:\\s*#\\s*(?:include|import|define|libdefine)\\b)"
+        }
+      ]
+    },
+    "scriptkeywords": {
+      "patterns": [
+        { "name": "keyword.declaration", "match": "(?i:\\b(?:script|function)\\b)" }
+      ]
+    },
+    "scripttypes": {
+      "patterns": [
+        {
+          "name": "keyword.other",
+          "match": "(?i:\\b(?:open|enter|respawn|death|disconnect|unloading|net|clientside)\\b)"
+        }
+      ]
+    },
+    "variablemodifiers": {
+      "patterns": [
+        { "name": "storage.modifier", "match": "(?i:\\b(?:global|world)\\b)" }
+      ]
+    },
+    "types": {
+      "patterns": [
+        { "name": "storage.type", "match": "(?i:\\b(?:void|int|bool|str)\\b)" }
+      ]
+    },
+    "controlflow": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "(?i:\\b(?:if|else|while|for|switch|case|default|break|continue|return|goto)\\b)"
+        }
+      ]
+    },
+    "other": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "(?i:\\b(?:terminate|restart|suspend)\\b)"
+        },
+        {
+          "name": "constant.language.boolean",
+          "match": "(?i:\\b(?:true|false)\\b)"
+        }
+      ]
+    },
+    "functioncallpattern": {
+      "patterns": [
+        {
+          "name": "entity.name.function",
+          "match": "(?i:\\b[A-Za-z_][A-Za-z0-9_]*(?:::[A-Za-z_][A-Za-z0-9_]*)*\\b)(?=\\s*\\()"
+        }
+      ]
+    }
+  }
+}

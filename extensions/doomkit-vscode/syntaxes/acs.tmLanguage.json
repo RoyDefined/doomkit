@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ACS (ACC-compatible)",
+  "scopeName": "source.acs",
+  "patterns": [
+    { "include": "source.compilers.shared" }
+  ],
+  "repository": {}
+}

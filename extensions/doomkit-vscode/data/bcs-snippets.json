@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "snippet",
+    "name": "buildmsg",
+    "signature": "buildmsg ( <expr> ) { ... }",
+    "summary": "Message-building block. Expression should call Print()-like functions without a message argument. Body runs for each call and exposes Append().",
+    "engines": ["uzdoom", "zandronum"],
+    "languages": ["bcs"],
+    "insertSnippet": "buildmsg (${1:Print()})\n{\n\tAppend(${2:s: \"abc\", d: 123, c: '!'});\n\t$0\n}"
+  }
+]

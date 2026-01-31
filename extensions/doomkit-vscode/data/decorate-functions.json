@@ -1,0 +1,29 @@
+[
+  {
+    "kind": "function",
+    "name": "A_ClientsideACSExecute",
+    "signature": "int A_ClientsideACSExecute (str script, [int arg1, int arg2, int arg3, int arg4])",
+    "summary": "Variant of ACS_NamedExecuteWithResult that executes clientside immediately for DECORATE actor states.",
+    "docUrl": "https://wiki.zandronum.com/A_ClientsideACSExecute",
+    "engines": ["zandronum"],
+    "languages": ["decorate"]
+  },
+  {
+    "kind": "function",
+    "name": "A_SetSpecies",
+    "signature": "A_SetSpecies (str species [, int ptr])",
+    "summary": "Changes the calling actor's (or pointer target's) species. Use \"None\" to remove species.",
+    "docUrl": "https://zdoom.org/w/index.php?title=A_SetSpecies",
+    "engines": ["uzdoom"],
+    "languages": ["decorate"]
+  },
+  {
+    "kind": "function",
+    "name": "A_Jump",
+    "signature": "state A_Jump (int chance, int offset, ...) | state A_Jump (int chance, str \"state\", ...)",
+    "summary": "Randomly advances to a different state/frame based on chance.",
+    "docUrl": "https://zdoom.org/w/index.php?title=A_Jump",
+    "engines": ["uzdoom", "zandronum"],
+    "languages": ["decorate"]
+  }
+]

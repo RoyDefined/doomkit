@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "BCS (BCC-compatible)",
+  "scopeName": "source.bcs",
+  "patterns": [
+    { "include": "#strict" },
+    { "include": "#modifiers" },
+    { "include": "#declarations" },
+    { "include": "#preprocessor" },
+    { "include": "#types" },
+
+    { "include": "source.compilers.shared" }
+  ],
+  "repository": {
+    "strict": {
+      "patterns": [
+        {
+          "name": "keyword.declaration",
+          "match": "(?i:\\bstrict\\s+namespace\\b)"
+        },
+        {
+          "name": "keyword.declaration",
+          "match": "(?i:\\bstrict\\b)"
+        }
+      ]
+    },
+
+    "modifiers": {
+      "patterns": [
+        {
+          "name": "storage.modifier",
+          "match": "(?i:\\binternal\\b)"
+        }
+      ]
+    },
+
+    "declarations": {
+      "patterns": [
+        {
+          "name": "keyword.declaration",
+          "match": "(?i:\\bstruct\\b)"
+        }
+      ]
+    },
+
+    "preprocessor": {
+      "patterns": [
+        {
+          "name": "keyword.control.preprocessor",
+          "match": "^(?i:\\s*#\\s*(?:if|ifdef|endif|undef)\\b)"
+        }
+      ]
+    },
+
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type",
+          "match": "(?i:\\b(?:raw|fixed)\\b)"
+        }
+      ]
+    }
+  }
+}

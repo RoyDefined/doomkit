@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "DECORATE",
+  "scopeName": "source.decorate",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+
+    { "include": "#keywords" },
+    { "include": "#flowcontrol" },
+
+    { "include": "#functioncallpattern" },
+
+    { "include": "#numberpattern" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash", "match": "//.*$" },
+        { "name": "comment.block", "begin": "/\\*", "end": "\\*/" }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape", "match": "\\\\." }
+          ]
+        }
+      ]
+    },
+
+    "keywords": {
+      "patterns": [
+        { "name": "keyword.declaration", "match": "(?i:\\bactor\\b)" },
+        { "name": "keyword.declaration", "match": "(?i:\\bstates\\b)" }
+      ]
+    },
+
+    "flowcontrol": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "(?i:\\b(?:loop|stop|wait|fail|goto)\\b)"
+        }
+      ]
+    },
+
+    "functioncallpattern": {
+      "patterns": [
+        {
+          "name": "entity.name.function",
+          "match": "(?i:\\b[A-Za-z_][A-Za-z0-9_]*\\b)(?=\\s*\\()"
+        }
+      ]
+    },
+
+    "numberpattern": {
+      "patterns": [
+        { "name": "constant.numeric", "match": "\\b-?\\d+(?:\\.\\d+)?\\b" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "kind": "function",
+    "name": "Append",
+    "signature": "Append(...)",
+    "summary": "Outputs content inside a buildmsg body. Supports cast types supported by Print().",
+    "engines": ["uzdoom", "zandronum"],
+    "languages": ["bcs"]
+  }
+]

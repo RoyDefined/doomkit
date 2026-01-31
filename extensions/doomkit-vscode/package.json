@@ -1,0 +1,82 @@
+{
+  "name": "doomkit",
+  "displayName": "DoomKit",
+  "publisher": "roydefined",
+  "version": "0.1.0",
+  "description": "DoomKit introduces modern Doom scripting and lump support.",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "DoomKit",
+      "properties": {
+        "doomLanguage.engine": {
+          "type": "string",
+          "enum": ["uzdoom", "zandronum"],
+          "default": "uzdoom",
+          "description": "Target runtime engine. Provides feature gating."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "doomLanguage.pickEngine",
+        "title": "Pick Doom Engine"
+      },
+      {
+        "command": "doomLanguage.searchDocs",
+        "title": "Doom Language: Search Documentation"
+      }
+    ],
+    "languages": [
+      {
+        "id": "acs",
+        "aliases": ["ACS"],
+        "extensions": [".acs"],
+        "configuration": "./language/language-configuration.json"
+      },
+      {
+        "id": "bcs",
+        "aliases": ["BCS"],
+        "extensions": [".bcs"],
+        "configuration": "./language/language-configuration.json"
+      },
+      {
+        "id": "decorate",
+        "aliases": ["DECORATE"],
+        "extensions": [".dec"],
+        "configuration": "./language/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "scopeName": "source.compilers.shared",
+        "path": "./syntaxes/compiler-shared.tmLanguage.json"
+      },
+      {
+        "language": "acs",
+        "scopeName": "source.acs",
+        "path": "./syntaxes/acs.tmLanguage.json"
+      },
+      {
+        "language": "bcs",
+        "scopeName": "source.bcs",
+        "path": "./syntaxes/bcs.tmLanguage.json"
+      },
+      {
+        "language": "decorate",
+        "scopeName": "source.decorate",
+        "path": "./syntaxes/decorate.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "@types/vscode": "^1.108.1",
+    "typescript": "^5.5.0"
+  }
+}
