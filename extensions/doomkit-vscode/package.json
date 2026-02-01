@@ -8,7 +8,9 @@
   "engines": {
     "vscode": "^1.90.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
@@ -16,7 +18,10 @@
       "properties": {
         "doomLanguage.engine": {
           "type": "string",
-          "enum": ["uzdoom", "zandronum"],
+          "enum": [
+            "uzdoom",
+            "zandronum"
+          ],
           "default": "uzdoom",
           "description": "Target runtime engine. Provides feature gating."
         }
@@ -35,20 +40,32 @@
     "languages": [
       {
         "id": "acs",
-        "aliases": ["ACS"],
-        "extensions": [".acs"],
+        "aliases": [
+          "ACS"
+        ],
+        "extensions": [
+          ".acs"
+        ],
         "configuration": "./language/language-configuration.json"
       },
       {
         "id": "bcs",
-        "aliases": ["BCS"],
-        "extensions": [".bcs"],
+        "aliases": [
+          "BCS"
+        ],
+        "extensions": [
+          ".bcs"
+        ],
         "configuration": "./language/language-configuration.json"
       },
       {
         "id": "decorate",
-        "aliases": ["DECORATE"],
-        "extensions": [".dec"],
+        "aliases": [
+          "DECORATE"
+        ],
+        "extensions": [
+          ".dec"
+        ],
         "configuration": "./language/language-configuration.json"
       }
     ],
@@ -77,6 +94,12 @@
   "devDependencies": {
     "@types/node": "^25.0.10",
     "@types/vscode": "^1.108.1",
-    "typescript": "^5.5.0"
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
   }
 }

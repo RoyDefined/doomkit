@@ -1,15 +1,12 @@
-import * as vscode from "vscode";
-import { LanguageId } from "./data";
+import * as vscode from 'vscode';
+import type { LanguageId } from './data';
 
-export function getActiveLanguageId(): LanguageId
-{
+export function getActiveLanguageId(): LanguageId {
     const id = vscode.window.activeTextEditor?.document.languageId;
 
-    if (id === "bcs")
-        return "bcs";
+    if (id === 'bcs') return 'bcs';
 
-    if (id === "decorate")
-        return "decorate";
+    if (id === 'decorate') return 'decorate';
 
-    return "acs";
+    return 'acs';
 }

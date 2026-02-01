@@ -32,9 +32,7 @@
           "name": "string.quoted.double",
           "begin": "\"",
           "end": "\"",
-          "patterns": [
-            { "name": "constant.character.escape", "match": "\\\\." }
-          ]
+          "patterns": [{ "name": "constant.character.escape", "match": "\\\\." }]
         }
       ]
     },
@@ -47,9 +45,7 @@
       ]
     },
     "scriptkeywords": {
-      "patterns": [
-        { "name": "keyword.declaration", "match": "(?i:\\b(?:script|function)\\b)" }
-      ]
+      "patterns": [{ "name": "keyword.declaration", "match": "(?i:\\b(?:script|function)\\b)" }]
     },
     "scripttypes": {
       "patterns": [
@@ -60,14 +56,10 @@
       ]
     },
     "variablemodifiers": {
-      "patterns": [
-        { "name": "storage.modifier", "match": "(?i:\\b(?:global|world)\\b)" }
-      ]
+      "patterns": [{ "name": "storage.modifier", "match": "(?i:\\b(?:global|world)\\b)" }]
     },
     "types": {
-      "patterns": [
-        { "name": "storage.type", "match": "(?i:\\b(?:void|int|bool|str)\\b)" }
-      ]
+      "patterns": [{ "name": "storage.type", "match": "(?i:\\b(?:void|int|bool|str)\\b)" }]
     },
     "controlflow": {
       "patterns": [

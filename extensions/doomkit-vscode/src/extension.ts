@@ -1,11 +1,10 @@
-import * as vscode from "vscode";
-import { registerUi } from "./ui";
-import { registerCompletion } from "./providers/completion";
-import { registerHover } from "./providers/hover";
-import { registerDocsSearch } from "./providers/docsSearch";
+import type * as vscode from 'vscode';
+import { registerCompletion } from './providers/completion';
+import { registerDocsSearch } from './providers/docsSearch';
+import { registerHover } from './providers/hover';
+import { registerUi } from './ui';
 
-export function activate(context: vscode.ExtensionContext): void
-{
+export function activate(context: vscode.ExtensionContext): void {
     registerUi(context);
 
     registerCompletion(context);
@@ -13,6 +12,4 @@ export function activate(context: vscode.ExtensionContext): void
     registerDocsSearch(context);
 }
 
-export function deactivate(): void
-{
-}
+export function deactivate(): void {}

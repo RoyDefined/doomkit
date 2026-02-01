@@ -1,12 +1,11 @@
-export const Engines = ["uzdoom", "zandronum"] as const;
+export const Engines = ['uzdoom', 'zandronum'] as const;
 export type Engine = (typeof Engines)[number];
 
-export type LanguageId = "acs" | "bcs" | "decorate";
+export type LanguageId = 'acs' | 'bcs' | 'decorate';
 
-export type SymbolKind = "function" | "snippet";
+export type SymbolKind = 'function' | 'snippet';
 
-export interface DoomSymbol
-{
+export interface DoomSymbol {
     kind: SymbolKind;
     name: string;
     signature?: string;

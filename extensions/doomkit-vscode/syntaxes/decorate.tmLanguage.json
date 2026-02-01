@@ -27,9 +27,7 @@
           "name": "string.quoted.double",
           "begin": "\"",
           "end": "\"",
-          "patterns": [
-            { "name": "constant.character.escape", "match": "\\\\." }
-          ]
+          "patterns": [{ "name": "constant.character.escape", "match": "\\\\." }]
         }
       ]
     },
@@ -60,9 +58,7 @@
     },
 
     "numberpattern": {
-      "patterns": [
-        { "name": "constant.numeric", "match": "\\b-?\\d+(?:\\.\\d+)?\\b" }
-      ]
+      "patterns": [{ "name": "constant.numeric", "match": "\\b-?\\d+(?:\\.\\d+)?\\b" }]
     }
   }
 }
